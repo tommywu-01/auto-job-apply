@@ -1,0 +1,17 @@
+[
+  {
+    "timestamp": "2026-02-08T18:17:34.046146",
+    "from": "linkedin-easy-apply-bot",
+    "alert_type": "ERROR",
+    "priority": "high",
+    "details": {
+      "error_message": "Easy Apply button not found",
+      "current_step": "click_easy_apply",
+      "job_url": "https://linkedin.com/jobs/123",
+      "retry_count": 3,
+      "screenshot": null
+    },
+    "request": "troubleshoot_and_resume",
+    "escalation_count": 3
+  }
+]

@@ -1,0 +1,13 @@
+2026-02-08 16:33:06,232 - INFO - 设置Chrome驱动... (headless=True, use_profile=True)
+2026-02-08 16:33:06,232 - INFO - ====== WebDriver manager ======
+2026-02-08 16:33:06,316 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-08 16:33:06,320 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-02-08 16:33:06,357 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15212
+2026-02-08 16:33:06,359 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-08 16:33:06,360 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2026-02-08 16:33:06,393 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 15212
+2026-02-08 16:33:06,395 - INFO - Driver [/Users/tommywu/.wdm/drivers/chromedriver/mac64/144.0.7559.133/chromedriver-mac-arm64/chromedriver] found in cache
+2026-02-08 16:33:06,395 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: /Users/tommywu/.wdm/drivers/chromedriver/mac64/144.0.7559.133/chromedriver-mac-arm64/chromedriver
+2026-02-08 16:33:06,397 - DEBUG - Started executable: `/Users/tommywu/.wdm/drivers/chromedriver/mac64/144.0.7559.133/chromedriver-mac-arm64/chromedriver` in a child process with pid: 37510 using 0 to output -3
+2026-02-08 16:33:06,603 - DEBUG - POST http://localhost:58635/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'useAutomationExtension': False, 'excludeSwitches': ['enable-automation'], 'prefs': {'credentials_enable_service': False, 'profile.password_manager_enabled': False, 'download.default_directory': '/Users/tommywu/Downloads', 'download.prompt_for_download': False}, 'extensions': [], 'args': ['--no-sandbox', '--ignore-certificate-errors', '--disable-extensions', '--disable-gpu', '--disable-dev-shm-usage', '--window-size=1920,1080', '--start-maximized', '--disable-blink-features', '--disable-blink-features=AutomationControlled', '--headless=new', '--disable-gpu', '--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', '--user-data-dir=/Users/tommywu/Library/Application Support/Google/Chrome', '--profile-directory=Default']}}}}
+2026-02-08 16:33:06,603 - DEBUG - Starting new HTTP connection (1): localhost:58635

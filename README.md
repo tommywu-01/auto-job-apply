@@ -1,163 +1,234 @@
-# 🤖 Auto Job Apply - AI-Powered Job Application Automation
+# LinkedIn Easy Apply - 全自动申请系统
 
-An intelligent, fully automated job application system that uses AI vision and adaptive selectors to apply to jobs across LinkedIn, Greenhouse, Lever, and Workday with zero human intervention.
+## 🎯 系统概览
 
-## ✨ Features
+全自动 LinkedIn Easy Apply 职位申请系统，集成 AI 智能填写、故障检测和自动救援机制。
 
-- 🔍 **AI Vision Analysis** - Automatically identifies form fields using screenshot analysis
-- 🧠 **Adaptive Selectors** - Smart element detection that works across different ATS platforms
-- 📄 **Resume Auto-Upload** - Intelligent resume matching and upload
-- 🎯 **Multi-Platform Support** - LinkedIn Easy Apply, Greenhouse, Lever, Workday
-- 📝 **Dynamic Form Filling** - Automatically answers custom questions using AI
-- 📊 **Application Tracking** - Logs and screenshots for every application
-- 🔒 **Human-Like Behavior** - Random delays and realistic interaction patterns
+## 📁 文件清单
 
-## 🚀 Quick Start
+### 核心脚本
 
+| 文件 | 功能 | 推荐度 |
+|------|------|--------|
+| `linkedin_easy_apply_v4.py` | **稳定版** - 已验证可用 | ⭐⭐⭐⭐⭐ |
+| `linkedin_easy_apply_rescue.py` | **救援版** - 带故障自动召唤 | ⭐⭐⭐⭐⭐ |
+| `linkedin_ai_apply.py` | AI 智能分析版 | ⭐⭐⭐ |
+| `auto_apply_bot.py` | 批量申请系统 | ⭐⭐⭐⭐ |
+
+### 工具脚本
+
+| 文件 | 功能 |
+|------|------|
+| `dual_notify_system.py` | **双重通知系统** - 同时通知 Botty + Rescue Bot |
+| `rescue_system.py` | 故障检测与救援系统 |
+| `rescue.sh` | Mission Control 快速救援 |
+| `find_jobs.py` | 职位搜索工具 |
+| `simple_test.py` | 简单测试脚本 |
+
+### 文档
+
+| 文件 | 内容 |
+|------|------|
+| `RESCUE_MECHANISM.md` | 故障救援机制说明 |
+| `INTEGRATION_REPORT.md` | 集成改进报告 |
+| `COMPLETION_SUMMARY.md` | 完成总结 |
+
+## 🚀 快速使用
+
+### 1. 单次申请（稳定版）
 ```bash
-# Clone and setup
-git clone https://github.com/tommywu/auto-job-apply.git
-cd auto-job-apply
-pip install -r requirements.txt
-
-# Configure your profile
-cp config/profile.example.yaml config/profile.yaml
-# Edit config/profile.yaml with your information
-
-# Run automated application
-python3 auto_apply_all.py --target-jobs 5
+cd ~/.openclaw/workspace/auto-job-apply
+python3 linkedin_easy_apply_v4.py
 ```
 
-## 📁 Project Structure
-
-```
-auto-job-apply/
-├── auto_apply_all.py              # Main automation script
-├── linkedin_easy_apply_fixed.py   # LinkedIn Easy Apply automation
-├── greenhouse_auto_apply_fixed.py # Greenhouse/Lever automation
-├── workday_auto_apply_fixed.py    # Workday automation
-├── ai_form_filler.py              # AI-powered form filling
-├── page_analyzer.py               # Page structure analyzer
-├── adaptive_selector.py           # Smart element selector
-├── resume_uploader.py             # Intelligent resume upload
-├── config/
-│   ├── profile.yaml               # Your personal information
-│   ├── answers.json               # Common Q&A database
-│   └── job_targets.json           # Target companies and positions
-├── logs/                          # Application logs
-├── screenshots/                   # Debug screenshots
-└── test_reports/                  # Test results
+### 2. 带故障救援的申请
+```bash
+python3 linkedin_easy_apply_rescue.py
 ```
 
-## 🔧 Configuration
+### 3. 批量自动申请
+```bash
+# 每2小时自动运行（已配置cron）
+python3 auto_apply_bot.py
+```
 
-### Personal Information (`config/profile.yaml`)
+## 🆘 故障救援与双重通知
 
+### 自动救援触发条件
+- 5分钟无进展
+- 连续3次错误
+- 未捕获的异常
+
+### 双重通知机制
+出错时 **同时通知两个 Agent**：
+
+| Agent | ID | 职责 |
+|-------|-----|------|
+| **Botty** (Main) | `jn78tecygdgddznnd4vjvjdw9980f9je` | 主要救援 |
+| **Rescue Bot** | `jn7apr58t773gffa140hktc9ds80fvqr` | 备份救援 + 检查 Botty 状态 |
+
+**通知内容：**
+- 错误类型和详情
+- 当前步骤和职位URL
+- 截图路径
+- 重试次数
+- Rescue Bot 额外检查: `check_botty_status`, `takeover_if_needed`
+
+### 手动救援指令
+```bash
+# 查看当前状态
+./rescue.sh status
+
+# 暂停申请
+./rescue.sh pause
+
+# 恢复申请
+./rescue.sh resume
+
+# 跳过当前职位
+./rescue.sh skip
+```
+
+### 通知文件位置
+- Botty: `/tmp/mission-control-notify-main.txt`
+- Rescue Bot: `/tmp/mission-control-notify-rescue.txt`
+
+## 📝 配置说明
+
+### 个人资料 (`config/profile.yaml`)
 ```yaml
 personal_info:
-  first_name: "Your Name"
-  last_name: "Your Last"
-  email: "your.email@example.com"
-  phone: "123-456-7890"
-  linkedin: "https://linkedin.com/in/yourprofile"
-
-education:
-  - school: "Your University"
-    degree: "M.S./B.A."
-    field: "Your Major"
-    year: "2025"
+  first_name: Tommy
+  last_name: Wu
+  email: tommy.wu@nyu.edu
+  phone: 917-742-4303
+  linkedin: https://linkedin.com/in/tommywu
+  website: https://wlab.tech
 
 experience:
-  - title: "Your Title"
-    company: "Your Company"
-    description: "Your achievements..."
+  - years: 5
+    title: Creative Director
+  
+education:
+  - degree: M.S.
+    field: Integrated Design & Media
+    school: NYU Tandon
 ```
 
-### Target Jobs (`config/job_targets.json`)
-
-```json
-{
-  "targets": [
-    {
-      "company": "Company Name",
-      "title": "Job Title",
-      "platform": "linkedin/greenhouse/workday",
-      "url": "https://..."
-    }
-  ]
+### AI 答案库
+在 `linkedin_easy_apply_rescue.py` 中配置：
+```python
+AI_ANSWERS = {
+    'photo shoot': '5',
+    'years of experience': '5',
+    'sponsorship': 'Yes',
+    'salary': '150000',
+    'notice': '2 weeks',
 }
 ```
 
-## 🎮 Usage
+## ⏰ Cron 配置
 
-### Apply to Target Jobs
+已配置的定时任务：
 
+| 任务 | 频率 | 功能 |
+|------|------|------|
+| `linkedin-easy-apply-auto` | 每2小时 | 自动运行批量申请 |
+| `auto-apply-debug-reminder` | 每10分钟 | 开发进度检查 |
+| `job-hunter-coaching` | 每5分钟 | Job Hunter 监督 |
+
+查看所有任务：
 ```bash
-# Apply to all configured targets
-python3 auto_apply_all.py
-
-# Apply with specific settings
-python3 auto_apply_all.py --max-jobs 10 --headless
+openclaw cron list
 ```
 
-### Platform-Specific
+## 📊 日志文件
 
-```bash
-# LinkedIn Easy Apply
-python3 linkedin_easy_apply_fixed.py \
-  --keywords "Creative Technologist" \
-  --location "New York" \
-  --max-jobs 5
-
-# Greenhouse/Lever
-python3 greenhouse_auto_apply_fixed.py \
-  --url "https://jobs.lever.co/company/job-id"
-
-# Workday
-python3 workday_auto_apply_fixed.py \
-  --company "Disney" \
-  --email "your@email.com" \
-  --password "your-password"
+```
+logs/
+├── applications.json     # 申请历史记录
+├── progress.json         # 进度记录
+├── cron.log             # Cron 运行日志
+├── error_*.png          # 错误截图
+└── report_*.txt         # 申请报告
 ```
 
-## 🧪 Testing
+## ✅ 成功记录
 
-```bash
-# Run all tests
-python3 test_system.py
+- **已申请职位**: US Tech Solutions - Creative Director
+- **状态**: Application sent ✓
+- **脚本**: `linkedin_easy_apply_v4.py`
+- **验证时间**: 2026-02-08
 
-# Test specific platform
-python3 test_linkedin.py
-python3 test_greenhouse.py
+## 🔧 故障排查
+
+### 常见问题
+
+1. **按钮找不到**
+   - 检查职位是否已申请
+   - 尝试刷新页面
+   - 使用救援脚本: `./rescue.sh skip`
+
+2. **浏览器崩溃**
+   - 检查 Chrome 版本
+   - 重启脚本
+   - 查看日志: `logs/cron.log`
+
+3. **申请被拒绝**
+   - 检查网络连接
+   - 查看错误截图: `logs/error_*.png`
+   - 联系 Botty 救援
+
+## 📞 联系方式
+
+| Agent | ID | Port |
+|-------|-----|------|
+| Botty (Main) | `jn78tecygdgddznnd4vjvjdw9980f9je` | 18789 |
+| Rescue Bot | `jn7apr58t773gffa140hktc9ds80fvqr` | 19789 |
+| Job Hunter | `jn75asyb443w07t8x9yxjpcs7580eyty` | 20789 |
+
+**Mission Control**: https://dashboard.convex.dev/d/clean-goat-205
+
+## 🎓 架构说明
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  User → Cron / Manual → auto_apply_bot.py (v5.2)        │
+└──────────────────┬──────────────────────────────────────┘
+                   │
+                   ▼
+┌─────────────────────────────────────────────────────────┐
+│  Dual Notify System (双重通知系统)                        │
+│  • 通知 Botty (Main)                                    │
+│  • 通知 Rescue Bot (Backup + 状态检查)                   │
+└──────────────────┬──────────────────────────────────────┘
+                   │
+        ┌─────────┴─────────┐
+        ▼                   ▼
+┌──────────────┐    ┌──────────────┐
+│    Botty     │    │ Rescue Bot   │
+│   (主救援)    │    │ (备份+检查)   │
+└──────────────┘    └──────────────┘
 ```
 
-## 📊 Monitoring
+## 📜 版本历史
 
-- **Logs**: Check `logs/` directory for detailed application logs
-- **Screenshots**: Check `screenshots/` for visual debugging
-- **Reports**: Check `test_reports/` for test results
+- **v1.0** - 基础登录和表单检测
+- **v2.0** - 多步骤申请流程
+- **v3.0** - AI 智能回答问题
+- **v4.0** - ✅ 稳定版，成功申请职位
+- **v5.0** - 故障自动救援系统
+- **v5.1** - Easy Apply 按钮点击修复（4种方式 fallback）
+- **v5.2** - **双重通知系统** - 同时通知 Botty + Rescue Bot
 
-## ⚠️ Important Notes
+## ⚠️ 注意事项
 
-1. **Rate Limiting**: Built-in delays to avoid being flagged as bot
-2. **Privacy**: Never commit credentials to git
-3. **Legal**: Use responsibly and in accordance with platform ToS
-4. **Monitoring**: Always review applications before final submission
-
-## 🤝 Contributing
-
-This is a personal project for job search automation. Feel free to fork and customize for your needs.
-
-## 📝 License
-
-MIT License - See LICENSE file for details
-
-## 🙏 Acknowledgments
-
-- Built with Selenium WebDriver
-- AI vision powered by Gemini/Claude
-- Inspired by the need for efficient job searching
+1. **申请频率**: 避免频繁申请，建议每2小时不超过5个
+2. **答案准确性**: 定期检查 AI 答案库，确保信息准确
+3. **日志清理**: 定期清理旧日志，避免磁盘空间不足
+4. **LinkedIn 政策**: 遵守 LinkedIn 使用条款，避免被封号
 
 ---
 
-**⚡ Pro Tip**: Start with `--max-jobs 1` to test the flow, then scale up once confirmed working!
+**最后更新**: 2026-02-08
+**维护者**: Botty
