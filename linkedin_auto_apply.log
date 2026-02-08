@@ -1,0 +1,17 @@
+2026-02-08 13:44:07,015 - INFO - 设置Chrome驱动...
+2026-02-08 13:44:07,015 - INFO - ====== WebDriver manager ======
+2026-02-08 13:44:07,117 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-08 13:44:07,177 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-08 13:44:07,214 - INFO - There is no [mac64] chromedriver "144.0.7559.133" for browser google-chrome "144.0.7559" in cache
+2026-02-08 13:44:07,218 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-08 13:44:07,320 - INFO - WebDriver version 144.0.7559.133 selected
+2026-02-08 13:44:07,322 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/144.0.7559.133/mac-arm64/chromedriver-mac-arm64.zip
+2026-02-08 13:44:07,322 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/144.0.7559.133/mac-arm64/chromedriver-mac-arm64.zip
+2026-02-08 13:44:07,372 - INFO - Driver downloading response is 200
+2026-02-08 13:44:07,638 - INFO - Get LATEST chromedriver version for google-chrome
+2026-02-08 13:44:07,743 - INFO - Driver has been saved in cache [/Users/tommywu/.wdm/drivers/chromedriver/mac64/144.0.7559.133]
+2026-02-08 13:44:08,717 - INFO - Chrome驱动设置完成
+2026-02-08 13:44:08,717 - INFO - 正在登录LinkedIn...
+2026-02-08 13:44:15,349 - ERROR - LinkedIn登录失败
+2026-02-08 13:44:15,349 - ERROR - 登录失败，退出
+2026-02-08 13:44:15,349 - INFO - 申请完成。共申请 0 个职位

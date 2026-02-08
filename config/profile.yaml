@@ -1,0 +1,228 @@
+# Tommy Wu 求职配置文件
+# 完全自动化求职申请系统配置
+
+personal_info:
+  # 基本信息
+  first_name: "Tommy"
+  middle_name: ""
+  last_name: "Wu"
+  full_name: "Tommy Wu"
+  
+  # 联系方式
+  email: "tommy.wu@nyu.edu"
+  phone: "917-742-4303"
+  phone_formatted: "(917)-742-4303"
+  
+  # 地址
+  street: "63 Flushing Ave, BLDG 22, FL 3"
+  city: "Brooklyn"
+  state: "New York"
+  zipcode: "11205"
+  postal_code: "11205"
+  country: "United States"
+  current_city: "Brooklyn, New York"
+  
+  # 个人链接
+  linkedin: "https://www.linkedin.com/in/tommywu/"
+  github: "https://github.com/tommywu"
+  website: "https://wlab.tech"
+  portfolio: "https://wlab.tech"
+
+education:
+  # 研究生
+  - school: "NYU Tandon School of Engineering"
+    degree: "M.S."
+    field_of_study: "Integrated Design & Media (IDM)"
+    gpa: ""
+    start_year: "2023"
+    end_year: "2025"
+    start_date: "2023-09"
+    end_date: "2025-05"
+    
+  # 本科
+  - school: "NYU Tisch School of the Arts"
+    degree: "B.F.A."
+    field_of_study: "Photography"
+    gpa: ""
+    start_year: "2019"
+    end_year: "2023"
+    start_date: "2019-09"
+    end_date: "2023-05"
+
+work_experience:
+  # 职位1: Director of Creative Technology @ Madwell
+  - job_title: "Director of Creative Technology"
+    company: "Madwell"
+    location: "New York, New York"
+    start_month: "09"
+    start_year: "2024"
+    end_month: "05"
+    end_year: "2025"
+    is_current: false
+    description: |
+      Led 25-person XR unit as Director of Creative Technology following Madwell's acquisition of WLab. 
+      Managed virtual production and immersive technology projects for major brands.
+      
+      Key responsibilities:
+      - Directed creative technology strategy for VP and XR initiatives
+      - Managed cross-functional teams spanning engineering, creative, and production
+      - Oversaw technical infrastructure for LED volumes and real-time pipelines
+      - Delivered award-winning projects including Visible "Truth About Yadas" (1.5B+ impressions, Webby winner)
+      - Spearheaded implementation of Unreal Engine workflows for real-time rendering
+      - Managed relationships with technology vendors and partners
+      
+  # 职位2: Co-Founder & CCO @ WLab (被收购)
+  - job_title: "Co-Founder & Chief Creative Officer"
+    company: "WLab Innovations Inc."
+    location: "Brooklyn, New York"
+    start_month: "01"
+    start_year: "2023"
+    end_month: "09"
+    end_year: "2024"
+    is_current: false
+    description: |
+      Co-founded WLab Innovations, a creative technology studio specializing in virtual production, 
+      LED walls, and immersive experiences. Company was acquired by Madwell in 2024.
+      
+      Key accomplishments:
+      - Directed virtual production for Mercedes-Benz, Sony Music, e.l.f. Cosmetics (19.9M views), and NASA projects
+      - Built and managed LED wall infrastructure for Mercer Labs and other major clients
+      - Led technical teams for XR/VP productions, managing 25+ person units
+      - Pioneered motion capture in microgravity environments for NASA research
+      - Developed proprietary workflows for real-time compositing and LED stage operation
+      - Secured $500K+ in project revenue within first year of operation
+      - Established partnerships with major brands and technology providers
+      
+  # 职位3: Assistant Director @ Shanghai Media Group
+  - job_title: "Assistant Director"
+    company: "Shanghai Media Group / Dragon TV"
+    location: "Shanghai, China"
+    start_month: "06"
+    start_year: "2018"
+    end_month: "08"
+    end_year: "2021"
+    is_current: false
+    description: |
+      Served as Assistant Director for major television productions at one of China's largest media groups.
+      
+      Key responsibilities:
+      - Directed live television broadcasts and pre-recorded content
+      - Managed production teams of 20+ crew members
+      - Coordinated with talent, technical crews, and post-production teams
+      - Implemented new production technologies and workflows
+      - Delivered 100+ episodes of prime-time programming
+      
+  # 职位4: Freelance Creative Producer
+  - job_title: "Freelance Creative Producer"
+    company: "Independent"
+    location: "New York / Shanghai"
+    start_month: "01"
+    start_year: "2016"
+    end_month: "12"
+    end_year: "2019"
+    is_current: false
+    description: |
+      Independent creative producer specializing in video production, photography, and emerging media technologies.
+      
+      Key projects:
+      - Produced commercial content for fashion and lifestyle brands
+      - Developed photography and video projects for international clients
+      - Experimented with early virtual reality and 360° video production
+      - Built network of clients across US and Asia
+
+skills:
+  technical:
+    - "Unreal Engine"
+    - "Virtual Production"
+    - "LED Wall Technology"
+    - "TouchDesigner"
+    - "LiDAR"
+    - "Motion Capture"
+    - "Python"
+    - "C++"
+    - "Real-Time Rendering"
+    - "Interactive Media"
+    - "Computational Imaging"
+    - "XR/VR/AR Development"
+  
+  professional:
+    - "Creative Direction"
+    - "Team Leadership"
+    - "Business Development"
+    - "Project Management"
+    - "Client Relations"
+    - "Technical Direction"
+    - "Real-Time Pipeline Design"
+    - "Stage Operations"
+
+equal_opportunity:
+  gender: "Male"
+  ethnicity: "Asian"
+  hispanic_or_latino: "No"
+  veteran_status: "I am not a veteran"
+  disability: "No"
+
+application_settings:
+  # 简历路径
+  resume_path: "~/Downloads/TOMMY WU Resume Dec 2025.pdf"
+  
+  # 工作授权
+  require_visa_sponsorship: "Yes"
+  us_citizenship: "Non-citizen seeking work authorization"
+  
+  # 薪资期望
+  desired_salary: 150000
+  current_ctc: 80000
+  currency: "USD"
+  
+  # 工作经验年限
+  years_of_experience: "5"
+  
+  # 离职通知期
+  notice_period_days: 30
+  
+  # LinkedIn资料
+  linkedin_headline: "Creative Director | Virtual Production | LED Walls | Unreal Engine | Motion Capture | NYC"
+  
+  # 最近雇主
+  recent_employer: "Madwell"
+  
+  # 信心水平 (1-10)
+  confidence_level: "9"
+  
+  # 申请行为设置
+  pause_before_submit: false  # 改为false实现完全自动
+  pause_at_failed_question: false
+  overwrite_previous_answers: true
+  run_in_background: true
+  
+  # AI设置
+  use_ai: true
+  ai_provider: "openai"
+  llm_model: "gpt-4o-mini"
+
+# 目标职位配置
+target_jobs:
+  - company: "Spring Studios"
+    title: "Director of Technical Services"
+    salary_range: "$120,000 - $150,000"
+    location: "New York, NY"
+    platform: "linkedin"
+    url: ""
+    priority: 1
+    
+  - company: "Eyeline Studios"
+    title: "Stage Operator"
+    salary_range: ""
+    location: ""
+    platform: "greenhouse"
+    url: ""
+    priority: 2
+    
+  - company: "Disney"
+    title: "Sr Manager, Technical Events Production"
+    salary_range: ""
+    location: ""
+    platform: "workday"
+    url: "https://jobs.disneycareers.com/"
+    priority: 3

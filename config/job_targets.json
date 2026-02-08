@@ -1,0 +1,98 @@
+{
+  "target_companies": [
+    {
+      "id": "spring-studios-001",
+      "company": "Spring Studios",
+      "title": "Director of Technical Services",
+      "department": "Technical Operations",
+      "salary_range": "$120,000 - $150,000",
+      "location": "New York, NY",
+      "platform": "linkedin",
+      "job_type": "Easy Apply",
+      "url": "",
+      "search_keywords": "Spring Studios Director Technical Services",
+      "priority": 1,
+      "notes": "Top priority target. Creative technology leadership role."
+    },
+    {
+      "id": "eyeline-studios-001", 
+      "company": "Eyeline Studios",
+      "title": "Stage Operator",
+      "department": "Virtual Production",
+      "salary_range": "",
+      "location": "Los Angeles, CA (Remote/Hybrid possible)",
+      "platform": "greenhouse",
+      "job_type": "Full-time",
+      "url": "",
+      "search_keywords": "Eyeline Studios Stage Operator Virtual Production",
+      "priority": 2,
+      "notes": "VP focus. May require relocation or remote work."
+    },
+    {
+      "id": "disney-001",
+      "company": "Disney",
+      "title": "Sr Manager, Technical Events Production",
+      "department": "Events Production",
+      "salary_range": "",
+      "location": "Orlando, FL or Burbank, CA",
+      "platform": "workday",
+      "job_type": "Full-time",
+      "url": "https://jobs.disneycareers.com/",
+      "search_keywords": "Disney Senior Manager Technical Events Production",
+      "priority": 3,
+      "notes": "Large corporate. Events focus rather than VP."
+    }
+  ],
+  
+  "additional_targets": [
+    {
+      "id": "meta-001",
+      "company": "Meta",
+      "title": "Technical Program Manager - Virtual Production",
+      "platform": "linkedin",
+      "priority": 4
+    },
+    {
+      "id": "netflix-001", 
+      "company": "Netflix",
+      "title": "Virtual Production Specialist",
+      "platform": "jobs.netflix.com",
+      "priority": 4
+    },
+    {
+      "id": "industrial-light-magic-001",
+      "company": "Industrial Light & Magic",
+      "title": "Stage Technician - Virtual Production",
+      "platform": "linkedin",
+      "priority": 5
+    }
+  ],
+  
+  "search_preferences": {
+    "keywords": [
+      "Virtual Production",
+      "Creative Technology", 
+      "Technical Director",
+      "LED Wall",
+      "Unreal Engine",
+      "Motion Capture",
+      "Stage Operations",
+      "Immersive Technology"
+    ],
+    "locations": [
+      "New York, NY",
+      "Brooklyn, NY",
+      "Los Angeles, CA",
+      "Remote"
+    ],
+    "experience_level": [
+      "Mid-Senior level",
+      "Director",
+      "Manager"
+    ],
+    "job_types": [
+      "Full-time",
+      "Contract"
+    ]
+  }
+}

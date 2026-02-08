@@ -1,0 +1,223 @@
+{
+  "common_questions": {
+    "why_interested": {
+      "question_patterns": [
+        "Why are you interested in this position",
+        "Why do you want to work here",
+        "What interests you about this role",
+        "Why are you applying for this position"
+      ],
+      "answer": "I am passionate about pushing the boundaries of virtual production and immersive technology. This role aligns perfectly with my expertise in LED wall operations, Unreal Engine, and real-time rendering. Having led technical teams for high-profile clients like Mercedes-Benz, Sony Music, and NASA, I am excited to bring my experience in creative technology to drive innovation and deliver exceptional results."
+    },
+    
+    "relevant_experience": {
+      "question_patterns": [
+        "Describe your relevant experience",
+        "What experience do you have",
+        "Tell us about your background",
+        "How does your experience relate to this position"
+      ],
+      "answer": "I have over 5 years of experience in creative technology and virtual production. As Director of Creative Technology at Madwell, I led a 25-person XR unit delivering award-winning projects. As Co-Founder of WLab, I built LED wall infrastructure and pioneered motion capture in microgravity for NASA. My technical expertise includes Unreal Engine, TouchDesigner, LiDAR, and real-time pipeline design."
+    },
+    
+    "leadership_experience": {
+      "question_patterns": [
+        "Describe your leadership experience",
+        "Have you managed teams",
+        "Tell us about a time you led a team",
+        "What is your management style"
+      ],
+      "answer": "I have extensive leadership experience, having managed teams of 25+ people across technical, creative, and production disciplines. At Madwell, I led an XR unit delivering projects with 1.5B+ impressions. At WLab, I built and managed cross-functional teams for virtual production. My management style emphasizes collaboration, clear communication, and empowering team members to excel in their expertise while maintaining focus on project goals."
+    },
+    
+    "technical_skills": {
+      "question_patterns": [
+        "What technical skills do you have",
+        "Describe your technical expertise",
+        "What software are you proficient in",
+        "List your technical skills"
+      ],
+      "answer": "My technical skills include: Unreal Engine (expert), Virtual Production pipelines, LED wall technology and operation, TouchDesigner, LiDAR systems, Motion Capture (OptiTrack, Vicon), Python and C++ programming, Real-time rendering, Computational imaging, XR/VR/AR development, Interactive media design, and Technical direction for live productions."
+    },
+    
+    "visa_sponsorship": {
+      "question_patterns": [
+        "Do you require visa sponsorship",
+        "Will you require sponsorship",
+        "Are you authorized to work",
+        "Do you need work authorization"
+      ],
+      "answer": "Yes, I will require visa sponsorship now or in the future. I am currently on F-1 OPT and will need H-1B sponsorship."
+    },
+    
+    "salary_expectations": {
+      "question_patterns": [
+        "What are your salary expectations",
+        "Expected salary",
+        "What is your desired compensation",
+        "Salary requirements"
+      ],
+      "answer": "Based on my experience and the responsibilities of this role, my salary expectation is in the range of $120,000 - $150,000 annually. I am open to discussion based on the total compensation package."
+    },
+    
+    "availability": {
+      "question_patterns": [
+        "When can you start",
+        "What is your notice period",
+        "How soon can you join",
+        "Availability to start"
+      ],
+      "answer": "I can start with a 30-day notice period to ensure a smooth transition from my current commitments. I am flexible and can discuss an earlier start date if needed."
+    },
+    
+    "relocation": {
+      "question_patterns": [
+        "Are you willing to relocate",
+        "Willingness to relocate",
+        "Can you relocate"
+      ],
+      "answer": "I am currently based in Brooklyn, New York and prefer to stay in the NYC area. I am open to hybrid work arrangements and occasional travel as required."
+    },
+    
+    "greatest_strength": {
+      "question_patterns": [
+        "What is your greatest strength",
+        "What are you best at",
+        "What makes you stand out"
+      ],
+      "answer": "My greatest strength is bridging the gap between creative vision and technical execution. I can communicate effectively with both creative directors and technical teams, ensuring that ambitious creative concepts are realized through robust technical solutions. This was instrumental in delivering projects like the Visible campaign (Webby winner) and NASA microgravity motion capture."
+    },
+    
+    "challenge_overcome": {
+      "question_patterns": [
+        "Describe a challenge you overcame",
+        "Tell us about a difficult project",
+        "How do you handle challenges"
+      ],
+      "answer": "One significant challenge was pioneering motion capture in microgravity for NASA. This required adapting existing technology for a zero-gravity environment, coordinating with NASA engineers, and developing new workflows. Despite the technical complexities and tight timeline, we successfully delivered the project, opening new possibilities for space-based content creation."
+    },
+    
+    "virtual_production_experience": {
+      "question_patterns": [
+        "Do you have virtual production experience",
+        "LED wall experience",
+        "Unreal Engine experience",
+        "Real-time rendering experience"
+      ],
+      "answer": "Yes, I have extensive virtual production experience. I have directed VP projects for Mercedes-Benz, Sony Music, e.l.f. Cosmetics (19.9M views), and NASA. I built and operated LED wall infrastructure at Mercer Labs and other locations. I am expert-level in Unreal Engine for real-time rendering and have developed proprietary workflows for LED stage operation and real-time compositing."
+    },
+    
+    "team_management": {
+      "question_patterns": [
+        "How do you manage teams",
+        "Describe your management experience",
+        "How do you handle conflict"
+      ],
+      "answer": "I believe in servant leadership - empowering team members while providing clear direction. I regularly hold one-on-ones, foster open communication, and create psychological safety for innovation. When conflicts arise, I address them directly and constructively, focusing on solutions rather than blame. At Madwell, this approach helped my 25-person team deliver award-winning work while maintaining high morale."
+    },
+    
+    "career_goals": {
+      "question_patterns": [
+        "What are your career goals",
+        "Where do you see yourself",
+        "What is your career aspiration"
+      ],
+      "answer": "My career goal is to be at the forefront of virtual production and immersive technology innovation. I aim to lead technical teams that push creative boundaries while delivering measurable business results. Long-term, I want to contribute to the evolution of VP as a standard production methodology and mentor the next generation of creative technologists."
+    },
+    
+    "portfolio": {
+      "question_patterns": [
+        "Link to portfolio",
+        "Portfolio URL",
+        "Work samples"
+      ],
+      "answer": "https://wlab.tech"
+    },
+    
+    "linkedin_profile": {
+      "question_patterns": [
+        "LinkedIn profile",
+        "LinkedIn URL"
+      ],
+      "answer": "https://www.linkedin.com/in/tommywu/"
+    },
+    
+    "notice_period_specific": {
+      "question_patterns": [
+        "Notice period",
+        "How much notice do you need"
+      ],
+      "answer": "30 days"
+    },
+    
+    "work_authorization": {
+      "question_patterns": [
+        "Are you legally authorized",
+        "Work authorization status",
+        "Can you work in the US"
+      ],
+      "answer": "I am authorized to work in the US under F-1 OPT. I will require H-1B sponsorship in the future."
+    },
+    
+    "education_highest": {
+      "question_patterns": [
+        "Highest level of education",
+        "Education level"
+      ],
+      "answer": "Master's Degree"
+    },
+    
+    "willing_to_travel": {
+      "question_patterns": [
+        "Willing to travel",
+        "Can you travel"
+      ],
+      "answer": "Yes, I am willing to travel as required for the role."
+    },
+    
+    "remote_work": {
+      "question_patterns": [
+        "Do you have remote work experience",
+        "Have you worked remotely"
+      ],
+      "answer": "Yes, I have experience working remotely and in hybrid environments. I am comfortable with remote collaboration tools and maintaining productivity while working from home."
+    }
+  },
+  
+  "salary_related": {
+    "desired_salary_usd": 150000,
+    "salary_range_min": 120000,
+    "salary_range_max": 160000,
+    "current_salary": 80000,
+    "currency": "USD"
+  },
+  
+  "boolean_answers": {
+    "require_sponsorship": true,
+    "willing_to_relocate": false,
+    "willing_to_travel": true,
+    "remote_experience": true,
+    "veteran": false,
+    "disability": false,
+    "hispanic_latino": false
+  },
+  
+  "dropdown_mappings": {
+    "ethnicity": {
+      "Asian": ["Asian", "Asian (Not Hispanic or Latino)", "Asian/Pacific Islander"],
+      "options": ["Asian", "Black or African American", "Hispanic or Latino", "Native American or Alaska Native", "Native Hawaiian or Other Pacific Islander", "White", "Two or More Races", "Decline to Self Identify"]
+    },
+    "gender": {
+      "Male": ["Male", "Man", "M", "MALE"],
+      "options": ["Male", "Female", "Non-Binary", "Prefer not to say", "Decline to Self Identify"]
+    },
+    "veteran_status": {
+      "not_veteran": ["I am not a veteran", "Not a Veteran", "No", "I am not a protected veteran", "Non-veteran"],
+      "options": ["I am not a protected veteran", "I identify as one or more of the classifications of a protected veteran", "I decline to self-identify", "Not a Veteran"]
+    },
+    "disability_status": {
+      "no": ["No", "No, I don't have a disability", "I do not have a disability", "Not disabled"],
+      "options": ["Yes, I have a disability", "No, I don't have a disability", "I do not wish to answer"]
+    }
+  }
+}
