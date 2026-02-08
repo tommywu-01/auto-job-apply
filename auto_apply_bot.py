@@ -17,11 +17,11 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from dual_notify_system import DualNotifySystem, check_mission_control_messages
 
-# 配置
+# 配置 - 今日目标：20个申请
 CONFIG = {
-    'search_keywords': ['Creative Director', 'Creative Technologist', 'Director of Technical Services'],
+    'search_keywords': ['Creative Director', 'Creative Technologist', 'Director of Technical Services', 'VP Creative', 'Art Director'],
     'location': 'New York',
-    'max_applications_per_run': 5,
+    'max_applications_per_run': 20,  # 今日目标：20个申请
     'min_match_score': 60,
 }
 
