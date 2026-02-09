@@ -29,6 +29,16 @@ def setup_driver():
     options.add_argument('--disable-gpu')
     options.add_argument('--disable-extensions')
     
+    # 使用持久化用户数据目录保持登录状态
+    from pathlib import Path
+    user_data_dir = Path.home() / '.linkedin_automation_profile'
+    user_data_dir.mkdir(exist_ok=True)
+    options.add_argument(f'--user-data-dir={user_data_dir}')
+    
+    # 禁用自动化检测
+    options.add_experimental_option('excludeSwitches', ['enable-automation'])
+    options.add_experimental_option('useAutomationExtension', False)
+    
     service = Service(ChromeDriverManager().install())
     return webdriver.Chrome(service=service, options=options)
 
@@ -96,20 +106,45 @@ def click_button(driver, text):
         return 'Not found';
     """)
 
+def is_logged_in(driver):
+    """检查是否已登录"""
+    try:
+        driver.get("https://www.linkedin.com/feed")
+        time.sleep(2)
+        current_url = driver.current_url
+        if "feed" in current_url or "linkedin.com/in/" in current_url:
+            return True
+        login_elements = driver.find_elements(By.ID, "username")
+        if len(login_elements) == 0:
+            return True
+        return False
+    except:
+        return False
+
+def smart_login(driver):
+    """智能登录 - 检查状态避免重复登录"""
+    print("\n🔐 检查登录状态...")
+    
+    if is_logged_in(driver):
+        print("✅ 已登录，使用现有会话")
+        return
+    
+    print("🔐 需要登录...")
+    driver.get("https://www.linkedin.com/login")
+    time.sleep(2)
+    driver.find_element(By.ID, "username").send_keys("wuyuehao2001@outlook.com")
+    driver.find_element(By.ID, "password").send_keys("Tommy12345#")
+    driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
+    time.sleep(3)
+    print("✅ 登录成功")
+
 def main():
-    print("🚀 LinkedIn Easy Apply - 最终稳定版 v4.0")
+    print("🚀 LinkedIn Easy Apply - 最终稳定版 v4.0 (持久化登录)")
     driver = setup_driver()
     
     try:
-        # 登录
-        print("\n🔐 登录...")
-        driver.get("https://www.linkedin.com/login")
-        time.sleep(2)
-        driver.find_element(By.ID, "username").send_keys("wuyuehao2001@outlook.com")
-        driver.find_element(By.ID, "password").send_keys("Tommy12345#")
-        driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
-        time.sleep(3)
-        print("✅ 登录成功")
+        # 智能登录（避免重复）
+        smart_login(driver)
         
         # 访问职位
         print("\n📋 访问职位...")

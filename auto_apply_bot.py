@@ -37,30 +37,103 @@ class LinkedInAutoApply:
         self.context = {'step': 'init', 'job_url': '', 'retry_count': 0}
         
     def setup_driver(self):
-        """初始化浏览器"""
+        """初始化浏览器 - 使用持久化profile保持登录状态"""
         options = Options()
         options.add_argument('--no-sandbox')
         options.add_argument('--window-size=1920,1080')
         options.add_argument('--disable-blink-features=AutomationControlled')
         options.add_argument('--disable-gpu')
         options.add_argument('--disable-extensions')
-        # 暂时不使用headless方便调试
-        # options.add_argument('--headless')
+        
+        # 使用持久化用户数据目录保持登录状态
+        user_data_dir = Path.home() / '.linkedin_automation_profile'
+        user_data_dir.mkdir(exist_ok=True)
+        options.add_argument(f'--user-data-dir={user_data_dir}')
+        
+        # 禁用自动化检测
+        options.add_experimental_option('excludeSwitches', ['enable-automation'])
+        options.add_experimental_option('useAutomationExtension', False)
         
         service = Service(ChromeDriverManager().install())
         self.driver = webdriver.Chrome(service=service, options=options)
         self.driver.set_page_load_timeout(30)
         
+        # 加载之前保存的cookies
+        self.load_cookies()
+    
+    def save_cookies(self):
+        """保存cookies到文件"""
+        try:
+            cookies = self.driver.get_cookies()
+            cookies_file = self.log_dir / 'linkedin_cookies.json'
+            with open(cookies_file, 'w') as f:
+                json.dump(cookies, f)
+            print("   💾 Cookies已保存")
+        except Exception as e:
+            print(f"   ⚠️ 保存cookies失败: {e}")
+    
+    def load_cookies(self):
+        """从文件加载cookies"""
+        try:
+            cookies_file = self.log_dir / 'linkedin_cookies.json'
+            if cookies_file.exists():
+                with open(cookies_file) as f:
+                    cookies = json.load(f)
+                for cookie in cookies:
+                    try:
+                        self.driver.add_cookie(cookie)
+                    except:
+                        pass
+                print("   📂 Cookies已加载")
+        except Exception as e:
+            print(f"   ⚠️ 加载cookies失败: {e}")
+    
+    def is_logged_in(self):
+        """检查是否已登录"""
+        try:
+            self.driver.get("https://www.linkedin.com/feed")
+            time.sleep(2)
+            # 检查是否有feed页面特征
+            current_url = self.driver.current_url
+            if "feed" in current_url or "linkedin.com/in/" in current_url:
+                print("   ✅ 已登录状态")
+                return True
+            # 检查是否有登录框
+            login_elements = self.driver.find_elements(By.ID, "username")
+            if len(login_elements) == 0:
+                print("   ✅ 已登录状态")
+                return True
+            return False
+        except Exception as e:
+            print(f"   ⚠️ 检查登录状态失败: {e}")
+            return False
+        
     def login(self):
-        """登录 LinkedIn"""
-        print("\n🔐 登录 LinkedIn...")
+        """登录 LinkedIn - 智能检查避免重复登录"""
+        print("\n🔐 检查登录状态...")
+        
+        # 先检查是否已登录
+        if self.is_logged_in():
+            print("✅ 已登录，跳过登录步骤")
+            return
+        
+        print("🔐 需要登录...")
         self.driver.get("https://www.linkedin.com/login")
         time.sleep(2)
-        self.driver.find_element(By.ID, "username").send_keys("wuyuehao2001@outlook.com")
-        self.driver.find_element(By.ID, "password").send_keys("Tommy12345#")
-        self.driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
-        time.sleep(4)
-        print("✅ 登录成功")
+        
+        try:
+            self.driver.find_element(By.ID, "username").send_keys("wuyuehao2001@outlook.com")
+            self.driver.find_element(By.ID, "password").send_keys("Tommy12345#")
+            self.driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
+            time.sleep(4)
+            
+            # 保存cookies供下次使用
+            self.save_cookies()
+            print("✅ 登录成功，已保存登录状态")
+            
+        except Exception as e:
+            print(f"❌ 登录失败: {e}")
+            raise
         
     def search_easy_apply_jobs(self, keyword):
         """搜索 Easy Apply 职位"""
